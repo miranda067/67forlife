@@ -7,21 +7,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="profile-card">
+  <div class="profile-container">
     <!-- Profile Picture -->
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
-         alt="Ocean Profile Picture" 
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+         alt="Ocean Profile Picture"
          class="profile-pic">
 
     <!-- Username -->
     <h1>@miranda</h1>
-
-    <!-- Stats Row -->
-    <div class="stats">
-      <div><strong>180</strong><br>Following</div>
-      <div><strong>340</strong><br>Followers</div>
-      <div><strong>1.2K</strong><br>Likes</div>
-    </div>
 
     <!-- Bio -->
     <p class="bio">
@@ -35,72 +28,41 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: linear-gradient(to bottom, #fddde6, #fff5cc); /* baby pink + butter yellow */
   color: #333;
+  text-align: center;
 }
 
-/* Profile Card */
-.profile-card {
-  width: 25%;                /* No bigger than a quarter of the page width */
-  max-width: 280px;          /* Keeps it from getting too big on large screens */
-  height: 25%;               /* No bigger than a quarter of the page height */
-  min-height: 250px;
-  background: white;
-  border-radius: 50%;        /* Makes the whole card circular */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-  overflow: hidden;
+/* Profile Container */
+.profile-container {
+  margin-top: 40px; /* push content down from top */
 }
 
 /* Profile Picture */
 .profile-pic {
-  width: 70px;
-  height: 70px;
+  height: 20vh;               /* no more than 1/5 of viewport height */
+  width: 20vh;
   border-radius: 50%;
-  border: 3px solid #ffb3d9;
+  border: 4px solid #ffb3d9;
   object-fit: cover;
-  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto 15px;        /* center + spacing below */
 }
 
 /* Username */
 h1 {
-  margin: 5px 0;
-  font-size: 1.2rem;
-  color: #ff6699;
-}
-
-/* Stats Row */
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 10px 0;
-}
-
-.stats div {
-  text-align: center;
-  font-size: 0.75rem;
-  color: #444;
-}
-
-.stats strong {
-  font-size: 0.9rem;
+  margin: 0 0 10px;
+  font-size: 1.6rem;
   color: #ff6699;
 }
 
 /* Bio */
 .bio {
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: #cc6699;
-  line-height: 1.2;
-  max-width: 200px;
+  margin: 0 auto;
+  max-width: 300px;
+  line-height: 1.5;
 }
+
