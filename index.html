@@ -8,17 +8,16 @@
 </head>
 <body>
   <div class="profile-container">
-    <!-- Profile Picture -->
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-         alt="Ocean Profile Picture"
-         class="profile-pic">
+    <!-- Profile Picture (Cupcake Emoji) -->
+    <div class="profile-pic">🧁</div>
 
     <!-- Username -->
     <h1>@miranda</h1>
 
     <!-- Bio -->
     <p class="bio">
-      Hi, I’m Miranda 🌸 I love volleyball 🏐, shopping 🛍️, and cupcakes 🍰
+      I like volleyball 🏐 and shopping 🛍️.<br>
+      I go to Dexter Southfield School 🎓
     </p>
   </div>
 </body>
@@ -35,19 +34,22 @@ body {
 
 /* Profile Container */
 .profile-container {
-  margin-top: 40px; /* push content down from top */
+  margin-top: 40px;
 }
 
-/* Profile Picture */
+/* Profile Picture (Emoji in Circle) */
 .profile-pic {
-  height: 20vh;               /* no more than 1/5 of viewport height */
-  width: 20vh;
+  height: 25vh;              /* no more than a quarter of the page height */
+  width: 25vh;
   border-radius: 50%;
+  background: white;
   border: 4px solid #ffb3d9;
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6vh;            /* size of cupcake emoji */
+  margin: 0 auto 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  display: block;
-  margin: 0 auto 15px;        /* center + spacing below */
 }
 
 /* Username */
@@ -65,4 +67,3 @@ h1 {
   max-width: 300px;
   line-height: 1.5;
 }
-
