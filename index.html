@@ -3,46 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miranda's Profile</title>
+  <title>Miranda's TikTok Style Profile</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header with Profile Picture + Cupcake -->
-  <header>
-    <div class="header-left">
-      <img src="profile.jpg" alt="Miranda's Profile Picture" class="profile-pic">
-    </div>
-    <div class="header-right">
-      <h1>Hello, I'm Miranda!</h1>
-      <p>Welcome to my sweet personal website 🌸</p>
-      <img src="https://cdn-icons-png.flaticon.com/512/2919/2919592.png" alt="Cupcake" class="cupcake">
+  <!-- Profile Header -->
+  <header class="profile-header">
+    <img src="profile.jpg" alt="Miranda's Profile Picture" class="profile-pic">
+    <h1>@miranda</h1>
+    <p class="bio">
+      Hi, I’m Miranda 🌸 I love volleyball 🏐, shopping 🛍️, and cupcakes 🍰
+    </p>
+    <div class="hashtags">
+      <span>#volleyball</span>
+      <span>#shopping</span>
+      <span>#cupcakes</span>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Hi, I’m Miranda! I love playing volleyball 🏐, going shopping 🛍️, and enjoying life’s little joys like cupcakes.  
-        This site is my cozy corner of the internet where you can learn a little about me!
-      </p>
-    </section>
-
-    <section>
-      <h2>My Interests</h2>
-      <ul>
-        <li>🏐 Volleyball</li>
-        <li>🛍️ Shopping</li>
-        <li>🍰 Cupcakes & sweet treats</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">@yourusername</a></p>
-    </section>
+  <!-- Posts Section -->
+  <main class="posts">
+    <h2>My Posts</h2>
+    <div class="post">
+      <p>🏐 Just had a great volleyball game today!</p>
+    </div>
+    <div class="post">
+      <p>🛍️ Went shopping for cute outfits this weekend!</p>
+    </div>
+    <div class="post">
+      <p>🍰 Tried the sweetest cupcake ever 💖</p>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -51,108 +41,3 @@
   </footer>
 </body>
 </html>
-/* General Page Styling */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to right, #fddde6, #fff5cc); /* baby pink → butter yellow */
-  color: #333;
-}
-
-/* Header Layout */
-header {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-bottom: 3px solid #ffcce0;
-}
-
-.header-left {
-  flex-shrink: 0;
-}
-
-.header-right {
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.2rem;
-  color: #ff6699;
-}
-
-header p {
-  margin: 5px 0;
-  font-style: italic;
-  color: #cc6699;
-}
-
-/* Profile Picture */
-.profile-pic {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  border: 4px solid #ffb3d9;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Cupcake Icon */
-.cupcake {
-  width: 50px;
-  margin-top: 10px;
-}
-
-/* Main Content */
-main {
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 30px;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-h2 {
-  color: #ff6699;
-  border-bottom: 2px solid #ffcce0;
-  padding-bottom: 5px;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
-  padding: 5px 0;
-  font-size: 1.1rem;
-}
-
-/* Links */
-a {
-  color: #cc6699;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-top: 3px solid #ffcce0;
-  font-size: 0.9rem;
-  color: #555;
-}
