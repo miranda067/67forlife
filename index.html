@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miranda's Instagram Style Profile</title>
+  <title>Miranda's Instagram Profile</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Profile Header -->
   <header class="profile-header">
     <div class="profile-left">
-      <img src="profile.jpg" alt="Miranda's Profile Picture" class="profile-pic">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Ocean Profile Picture" class="profile-pic">
     </div>
     <div class="profile-right">
       <h1>@miranda</h1>
@@ -33,24 +33,31 @@
   <!-- Feed Section -->
   <main class="posts">
     <div class="post">
-      <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d" alt="Volleyball" />
+      <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d" alt="Volleyball">
       <p>🏐 Just had a great volleyball game today!</p>
     </div>
     <div class="post">
-      <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47" alt="Shopping bags" />
+      <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47" alt="Shopping bags">
       <p>🛍️ Went shopping for cute outfits this weekend!</p>
     </div>
     <div class="post">
-      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff" alt="Cupcake" />
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff" alt="Cupcake">
       <p>🍰 Tried the sweetest cupcake ever 💖</p>
     </div>
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Miranda. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
 /* General Styling */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #fddde6, #fff5cc);
+  background: linear-gradient(to bottom, #fddde6, #fff5cc); /* baby pink + butter yellow */
   color: #333;
 }
 
@@ -71,9 +78,10 @@ body {
   margin-left: 20px;
 }
 
+/* Profile Picture */
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 4px solid #ffb3d9;
   object-fit: cover;
@@ -90,7 +98,7 @@ h1 {
 /* Stats like Instagram */
 .stats {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   margin-bottom: 10px;
 }
 
@@ -136,7 +144,7 @@ h1 {
 
 .post img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 
