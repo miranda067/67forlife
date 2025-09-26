@@ -3,53 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miranda's Instagram Profile</title>
+  <title>Miranda's TikTok Style Profile</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Profile Header -->
-  <header class="profile-header">
-    <div class="profile-left">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Ocean Profile Picture" class="profile-pic">
-    </div>
-    <div class="profile-right">
-      <h1>@miranda</h1>
-      <div class="stats">
-        <div><strong>12</strong><br>Posts</div>
-        <div><strong>340</strong><br>Followers</div>
-        <div><strong>180</strong><br>Following</div>
-      </div>
-      <p class="bio">
-        Hi, I’m Miranda 🌸 I love volleyball 🏐, shopping 🛍️, and cupcakes 🍰
-      </p>
-      <div class="hashtags">
-        <span>#volleyball</span>
-        <span>#shopping</span>
-        <span>#cupcakes</span>
-      </div>
-    </div>
-  </header>
+  <div class="profile-container">
+    <!-- Profile Picture -->
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+         alt="Ocean Profile Picture" 
+         class="profile-pic">
 
-  <!-- Feed Section -->
-  <main class="posts">
-    <div class="post">
-      <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d" alt="Volleyball">
-      <p>🏐 Just had a great volleyball game today!</p>
-    </div>
-    <div class="post">
-      <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47" alt="Shopping bags">
-      <p>🛍️ Went shopping for cute outfits this weekend!</p>
-    </div>
-    <div class="post">
-      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff" alt="Cupcake">
-      <p>🍰 Tried the sweetest cupcake ever 💖</p>
-    </div>
-  </main>
+    <!-- Username -->
+    <h1>@miranda</h1>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Miranda. All Rights Reserved.</p>
-  </footer>
+    <!-- Stats Row -->
+    <div class="stats">
+      <div><strong>180</strong><br>Following</div>
+      <div><strong>340</strong><br>Followers</div>
+      <div><strong>1.2K</strong><br>Likes</div>
+    </div>
+
+    <!-- Bio -->
+    <p class="bio">
+      Hi, I’m Miranda 🌸 I love volleyball 🏐, shopping 🛍️, and cupcakes 🍰
+    </p>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Miranda. All Rights Reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
 /* General Styling */
@@ -59,107 +42,62 @@ body {
   padding: 0;
   background: linear-gradient(to bottom, #fddde6, #fff5cc); /* baby pink + butter yellow */
   color: #333;
+  text-align: center;
 }
 
-/* Profile Header Layout */
-.profile-header {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 2px solid #ffcce0;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.profile-left {
-  flex-shrink: 0;
-}
-
-.profile-right {
-  margin-left: 20px;
+/* Profile Container */
+.profile-container {
+  padding: 30px 20px;
 }
 
 /* Profile Picture */
 .profile-pic {
-  width: 130px;
-  height: 130px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  border: 4px solid #ffb3d9;
+  border: 3px solid #ffb3d9;
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
 }
 
 /* Username */
 h1 {
-  margin: 0 0 10px;
-  font-size: 1.8rem;
+  margin: 5px 0 15px;
+  font-size: 1.6rem;
   color: #ff6699;
 }
 
-/* Stats like Instagram */
+/* Stats Row */
 .stats {
   display: flex;
-  gap: 25px;
-  margin-bottom: 10px;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 15px;
 }
 
 .stats div {
   text-align: center;
   font-size: 0.9rem;
-  color: #555;
+  color: #444;
 }
 
-/* Bio & Hashtags */
+.stats strong {
+  font-size: 1.1rem;
+  color: #ff6699;
+}
+
+/* Bio */
 .bio {
   font-size: 1rem;
   color: #cc6699;
-  margin-bottom: 10px;
-}
-
-.hashtags span {
-  display: inline-block;
-  margin: 3px;
-  padding: 5px 10px;
-  background-color: #fff;
-  border-radius: 15px;
-  font-size: 0.85rem;
-  color: #ff6699;
-  border: 1px solid #ffcce0;
-}
-
-/* Feed Posts Grid */
-.posts {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 15px;
-  padding: 20px;
-}
-
-.post {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  overflow: hidden;
-  text-align: left;
-}
-
-.post img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-.post p {
-  padding: 10px;
-  font-size: 0.95rem;
-  color: #444;
+  margin: 0 auto 30px;
+  max-width: 300px;
+  line-height: 1.5;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 15px;
   font-size: 0.8rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-top: 2px solid #ffcce0;
   color: #555;
+  margin-top: 40px;
 }
