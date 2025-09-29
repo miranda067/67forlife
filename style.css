@@ -12,9 +12,9 @@ body {
   padding: 0;
   height: 100vh;
   display: flex;
-  justify-content: center;   /* horizontal center */
-  align-items: center;       /* vertical center */
-  background: linear-gradient(to bottom, #fddde6, #fff5cc); /* baby pink + butter yellow */
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #fddde6, #fff5cc);
   color: #333;
   text-align: center;
 }
@@ -24,6 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 /* Profile Picture */
@@ -93,8 +94,9 @@ h1 {
 /* Tabs Row */
 .tabs {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Videos on left, Liked on right */
   width: 100%;
+  max-width: 400px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   margin-bottom: 40px;
