@@ -1,0 +1,7 @@
+.profile-pic {
+  height: 3.6vh;     /* 5x smaller than 18vh */
+  width: 3.6vh;      /* keep it circular */
+  border-radius: 50%;
+  border: 0.5vh solid #ffb3d9;
+  object-fit: cover;
+}
