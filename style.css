@@ -28,10 +28,10 @@ body {
 
 /* Profile Picture */
 .profile-pic {
-  height: 16vh;               /* smaller than 1/4 page */
+  height: 16vh;               
   width: 16vh;
-  border-radius: 50%;         /* makes it circular */
-  border: 0.5vh solid #ffb3d9; /* pink border */
+  border-radius: 50%;         
+  border: 0.5vh solid #ffb3d9;
   object-fit: cover;
   margin-bottom: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
@@ -83,8 +83,22 @@ h1 {
   padding: 10px 40px;
   cursor: pointer;
   transition: 0.2s ease;
+  margin-bottom: 30px;
 }
 
 .follow-btn:hover {
   background: #cc3366;
+}
+
+/* No Posts Section */
+.no-posts {
+  border-top: 1px solid #ddd;
+  padding-top: 40px;
+  text-align: center;
+  color: #777;
+}
+
+.no-posts-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
