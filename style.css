@@ -90,9 +90,43 @@ h1 {
   background: #cc3366;
 }
 
+/* Tabs Row */
+.tabs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 40px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: bold;
+  color: #777;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab.active {
+  color: #ff6699;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background-color: #ff6699;
+  border-radius: 2px;
+}
+
 /* No Posts Section */
 .no-posts {
-  border-top: 1px solid #ddd;
   padding-top: 40px;
   text-align: center;
   color: #777;
