@@ -5,3 +5,87 @@
   border: 0.5vh solid #ffb3d9;
   object-fit: cover;
 }
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(to bottom, #fddde6, #fff5cc); /* baby pink + butter yellow */
+  color: #333;
+  text-align: center;
+}
+
+/* Profile Container */
+.profile-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile Picture */
+.profile-pic {
+  height: 18vh;               /* smaller than 1/4 page */
+  width: 18vh;
+  border-radius: 50%;         /* circular */
+  border: 0.5vh solid #ffb3d9;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Username */
+h1 {
+  margin: 5px 0;
+  font-size: 1.6rem;
+  color: #ff6699;
+}
+
+/* Bio */
+.bio {
+  font-size: 1rem;
+  color: #cc6699;
+  max-width: 350px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Stats Row */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 15px;
+}
+
+.stats div {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.stats strong {
+  font-size: 1.2rem;
+  color: #ff6699;
+}
+
+/* Follow Button */
+.follow-btn {
+  background: #ff6699;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 40px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.follow-btn:hover {
+  background: #cc3366;
+}
