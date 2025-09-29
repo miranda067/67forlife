@@ -3,17 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miranda's Profile</title>
+  <title>Miranda's TikTok Profile</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation/Header -->
-  <header>
-    <h2>Miranda's Profile</h2>
-  </header>
-
-  <!-- Main Profile Section -->
-  <main class="profile-container">
+  <div class="profile-container">
     <!-- Profile Picture -->
     <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
          alt="Ocean Profile Picture" 
@@ -27,67 +21,16 @@
       Hi, I’m Miranda 🌸 I love volleyball 🏐 and shopping 🛍️.<br>
       I go to Dexter Southfield School 🎓
     </p>
-  </main>
+
+    <!-- Stats Row -->
+    <div class="stats">
+      <div><strong>150</strong><br>Following</div>
+      <div><strong>2.3K</strong><br>Followers</div>
+      <div><strong>10.2K</strong><br>Likes</div>
+    </div>
+
+    <!-- Follow Button -->
+    <button class="follow-btn">Follow</button>
+  </div>
 </body>
 </html>
-/* General Styling */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #fddde6, #fff5cc); /* baby pink + butter yellow */
-  color: #333;
-  text-align: center;
-}
-
-/* Header */
-header {
-  width: 100%;
-  padding: 15px;
-  background: rgba(255, 179, 217, 0.7); /* semi-transparent pink */
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-header h2 {
-  margin: 0;
-  font-size: 1.4rem;
-  color: #cc3366;
-}
-
-/* Profile Container */
-.profile-container {
-  margin-top: 120px; /* pushes content below header */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Profile Picture (Circular with border) */
-.profile-pic {
-  height: 18vh;                /* smaller than 1/4 page */
-  width: 18vh;
-  border-radius: 50%;          /* force circle */
-  border: 0.5vh solid #ffb3d9; /* pink border */
-  object-fit: cover;           /* makes the ocean fit nicely */
-  margin-bottom: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
-
-/* Username */
-h1 {
-  margin: 10px 0;
-  font-size: 1.8rem;
-  color: #ff6699;
-}
-
-/* Bio */
-.bio {
-  font-size: 1.1rem;
-  color: #cc6699;
-  max-width: 400px;
-  line-height: 1.6;
-}
