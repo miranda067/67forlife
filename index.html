@@ -29,7 +29,7 @@
       <div><strong>10.2K</strong><br>Likes</div>
     </div>
 
-    <!-- Follow Button -->
+    <!-- Follow/Unfollow Button -->
     <button class="follow-btn" id="followBtn">Follow</button>
 
     <!-- Tabs Row -->
@@ -55,6 +55,7 @@
 
     followBtn.addEventListener('click', () => {
       if (!isFollowing) {
+        // Switch to Following
         isFollowing = true;
         followBtn.textContent = 'Following';
         followBtn.style.backgroundColor = '#ccc';
@@ -66,6 +67,12 @@
           spread: 90,
           origin: { y: 0.6 }
         });
+      } else {
+        // Switch back to Follow
+        isFollowing = false;
+        followBtn.textContent = 'Follow';
+        followBtn.style.backgroundColor = '#ff6699';
+        followBtn.style.color = 'white';
       }
     });
   </script>
