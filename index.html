@@ -30,12 +30,12 @@
     </div>
 
     <!-- Follow Button -->
-    <button class="follow-btn">Follow</button>
+    <button class="follow-btn" id="followBtn">Follow</button>
 
     <!-- Tabs Row -->
     <div class="tabs">
-      <div class="tab active">Videos</div>
-      <div class="tab">Liked</div>
+      <div class="tab active" id="videosTab">Videos</div>
+      <div class="tab" id="likedTab">Liked</div>
     </div>
 
     <!-- No Posts Section -->
@@ -44,5 +44,30 @@
       <p>No posts yet</p>
     </div>
   </div>
+
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <!-- Custom Script -->
+  <script>
+    const followBtn = document.getElementById('followBtn');
+    let isFollowing = false;
+
+    followBtn.addEventListener('click', () => {
+      if (!isFollowing) {
+        isFollowing = true;
+        followBtn.textContent = 'Following';
+        followBtn.style.backgroundColor = '#ccc';
+        followBtn.style.color = '#333';
+
+        // 🎉 Confetti animation
+        confetti({
+          particleCount: 120,
+          spread: 90,
+          origin: { y: 0.6 }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
