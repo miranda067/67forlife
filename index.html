@@ -7,7 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="profile-container">
+  <!-- Navigation/Header -->
+  <header>
+    <h2>Miranda's Profile</h2>
+  </header>
+
+  <!-- Main Profile Section -->
+  <main class="profile-container">
     <!-- Profile Picture -->
     <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
          alt="Ocean Profile Picture" 
@@ -21,7 +27,7 @@
       Hi, I’m Miranda 🌸 I love volleyball 🏐 and shopping 🛍️.<br>
       I go to Dexter Southfield School 🎓
     </p>
-  </div>
+  </main>
 </body>
 </html>
 /* General Styling */
@@ -29,17 +35,32 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;   /* horizontal center */
-  align-items: center;       /* vertical center */
   background: linear-gradient(to bottom, #fddde6, #fff5cc); /* baby pink + butter yellow */
   color: #333;
   text-align: center;
 }
 
+/* Header */
+header {
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 179, 217, 0.7); /* semi-transparent pink */
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #cc3366;
+}
+
 /* Profile Container */
 .profile-container {
+  margin-top: 100px; /* pushes content below header */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,7 +68,7 @@ body {
 
 /* Profile Picture */
 .profile-pic {
-  height: 20vh;                /* about 1/5 of screen */
+  height: 20vh;                /* no more than 1/5 of page */
   width: 20vh;
   border-radius: 50%;          /* circular */
   border: 0.5vh solid #ffb3d9; /* thin pink border */
@@ -58,15 +79,15 @@ body {
 
 /* Username */
 h1 {
-  margin: 0 0 10px;
-  font-size: 1.6rem;
+  margin: 10px 0;
+  font-size: 1.8rem;
   color: #ff6699;
 }
 
 /* Bio */
 .bio {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #cc6699;
-  max-width: 300px;
-  line-height: 1.5;
+  max-width: 400px;
+  line-height: 1.6;
 }
