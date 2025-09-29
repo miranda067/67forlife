@@ -88,13 +88,13 @@ h1 {
 }
 
 .follow-btn:hover {
-  background: #cc3366;
+  opacity: 0.8;
 }
 
 /* Tabs Row */
 .tabs {
   display: flex;
-  justify-content: space-between; /* Videos on left, Liked on right */
+  justify-content: space-between;
   width: 100%;
   max-width: 400px;
   border-top: 1px solid #ddd;
