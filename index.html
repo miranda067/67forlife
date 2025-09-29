@@ -3,27 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miranda's TikTok Profile</title>
+  <title>Miranda's Profile</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="profile-container">
-    <!-- Profile Picture (Cupcake Emoji) -->
-    <div class="profile-pic">🧁</div>
+    <!-- Profile Picture -->
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+         alt="Ocean Profile Picture" 
+         class="profile-pic">
 
     <!-- Username -->
     <h1>@miranda</h1>
 
-    <!-- Stats Row -->
-    <div class="stats">
-      <div><strong>180</strong><br>Following</div>
-      <div><strong>340</strong><br>Followers</div>
-      <div><strong>1.2K</strong><br>Likes</div>
-    </div>
-
     <!-- Bio -->
     <p class="bio">
-      I like volleyball 🏐 and shopping 🛍️.<br>
+      Hi, I’m Miranda 🌸 I love volleyball 🏐 and shopping 🛍️.<br>
       I go to Dexter Southfield School 🎓
     </p>
   </div>
@@ -50,17 +45,13 @@ body {
   align-items: center;
 }
 
-/* Profile Picture (Emoji in Circle) */
+/* Profile Picture */
 .profile-pic {
   height: 20vh;                /* about 1/5 of screen */
   width: 20vh;
-  border-radius: 50%;
-  background: white;
+  border-radius: 50%;          /* circular */
   border: 0.5vh solid #ffb3d9; /* thin pink border */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 8vh;              /* cupcake emoji size */
+  object-fit: cover;
   margin-bottom: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -69,25 +60,6 @@ body {
 h1 {
   margin: 0 0 10px;
   font-size: 1.6rem;
-  color: #ff6699;
-}
-
-/* Stats Row (TikTok style) */
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 15px;
-}
-
-.stats div {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #444;
-}
-
-.stats strong {
-  font-size: 1.2rem;
   color: #ff6699;
 }
 
