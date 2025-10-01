@@ -103,7 +103,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 50px; /* spacing between each stat */
   margin: 15px 0 25px;
 }
 
@@ -114,12 +114,13 @@ body {
 }
 
 .stat-number {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #ff6699;
+  font-size: 1.4rem;
+  font-weight: bold;   /* numbers bold */
+  color: #000;         /* solid black like TikTok */
 }
 
 .stat-label {
   font-size: 0.9rem;
-  color: #555;
+  font-weight: bold;   /* labels bold too */
+  color: #444;
 }
