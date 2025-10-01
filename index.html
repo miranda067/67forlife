@@ -38,10 +38,19 @@
       <div class="tab" id="likedTab">Liked</div>
     </div>
 
-    <!-- No Posts Section -->
-    <div class="no-posts">
-      <div class="no-posts-icon">📭</div>
-      <p>No posts yet</p>
+    <!-- Content Sections -->
+    <div id="videosSection" class="tab-content">
+      <div class="no-posts">
+        <div class="no-posts-icon">📭</div>
+        <p>No posts yet</p>
+      </div>
+    </div>
+
+    <div id="likedSection" class="tab-content hidden">
+      <div class="no-posts">
+        <div class="no-posts-icon">❤️</div>
+        <p>No liked videos</p>
+      </div>
     </div>
   </div>
 
@@ -50,31 +59,53 @@
 
   <!-- Custom Script -->
   <script>
+    // Follow button toggle
     const followBtn = document.getElementById('followBtn');
     let isFollowing = false;
 
     followBtn.addEventListener('click', () => {
       if (!isFollowing) {
-        // Switch to Following
         isFollowing = true;
         followBtn.textContent = 'Following';
         followBtn.style.backgroundColor = '#ccc';
         followBtn.style.color = '#333';
 
-        // 🎉 Confetti animation
+        // 🎉 Confetti
         confetti({
           particleCount: 120,
           spread: 90,
           origin: { y: 0.6 }
         });
       } else {
-        // Switch back to Follow
         isFollowing = false;
         followBtn.textContent = 'Follow';
         followBtn.style.backgroundColor = '#ff6699';
         followBtn.style.color = 'white';
       }
     });
+
+    // Tabs toggle
+    const videosTab = document.getElementById('videosTab');
+    const likedTab = document.getElementById('likedTab');
+    const videosSection = document.getElementById('videosSection');
+    const likedSection = document.getElementById('likedSection');
+
+    function activateTab(tab) {
+      if (tab === 'videos') {
+        videosTab.classList.add('active');
+        likedTab.classList.remove('active');
+        videosSection.classList.remove('hidden');
+        likedSection.classList.add('hidden');
+      } else {
+        likedTab.classList.add('active');
+        videosTab.classList.remove('active');
+        likedSection.classList.remove('hidden');
+        videosSection.classList.add('hidden');
+      }
+    }
+
+    videosTab.addEventListener('click', () => activateTab('videos'));
+    likedTab.addEventListener('click', () => activateTab('liked'));
   </script>
 </body>
 </html>
