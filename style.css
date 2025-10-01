@@ -1,126 +1,51 @@
-.profile-pic {
-  height: 3.6vh;     /* 5x smaller than 18vh */
-  width: 3.6vh;      /* keep it circular */
-  border-radius: 50%;
-  border: 0.5vh solid #ffb3d9;
-  object-fit: cover;
-}
-/* General Page Styling */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to bottom, #fddde6, #fff5cc);
+/* Popup message */
+.popup {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-weight: bold;
   color: #333;
-  text-align: center;
-}
-
-/* Profile Picture */
-.profile-pic {
-  height: 16vh;               
-  width: 16vh;
-  border-radius: 50%;         
-  border: 0.5vh solid #ffb3d9;
-  object-fit: cover;
-  margin-bottom: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
-
-/* Follow Button */
-.follow-btn {
-  background: #ff6699;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 25px;
-  padding: 10px 40px;
-  cursor: pointer;
-  transition: 0.2s ease;
-  margin-bottom: 30px;
-}
-.follow-btn:hover {
-  opacity: 0.8;
-}
-
-/* Tabs */
-.tabs {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 400px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 20px;
-}
-.tab {
-  flex: 1;
-  text-align: center;
-  padding: 15px 0;
-  font-weight: bold;
-  color: #777;
-  cursor: pointer;
-  position: relative;
-}
-.tab.active {
-  color: #ff6699;
-}
-.tab.active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 25%;
-  width: 50%;
-  height: 3px;
-  background-color: #ff6699;
-  border-radius: 2px;
-}
-
-/* Sections */
-.tab-content {
-  width: 100%;
-  max-width: 400px;
-  margin-top: 20px;
+  z-index: 1000;
 }
 .hidden {
   display: none;
 }
-.no-posts {
-  padding: 40px 0;
-  text-align: center;
-  color: #777;
-}
-.no-posts-icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-/* Stats Row */
-.stats {
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #ddd;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 50px; /* spacing between each stat */
-  margin: 15px 0 25px;
+  padding: 8px 0;
+  z-index: 100;
 }
 
-.stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stat-number {
-  font-size: 1.4rem;
-  font-weight: bold;   /* numbers bold */
-  color: #000;         /* solid black like TikTok */
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  font-weight: bold;   /* labels bold too */
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
   color: #444;
+  cursor: pointer;
+  text-align: center;
+}
+
+.create-btn {
+  background: #ff6699;
+  color: white;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  padding: 10px 15px;
+  line-height: 1;
 }
