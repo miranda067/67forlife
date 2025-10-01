@@ -17,6 +17,14 @@
       <video src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" controls muted loop></video>
       <button class="like-btn">❤️</button>
     </div>
+    <div class="video-card">
+      <video src="https://samplelib.com/lib/preview/mp4/sample-10s.mp4" controls muted loop></video>
+      <button class="like-btn">❤️</button>
+    </div>
+    <div class="video-card">
+      <video src="https://samplelib.com/lib/preview/mp4/sample-15s.mp4" controls muted loop></video>
+      <button class="like-btn">❤️</button>
+    </div>
   </div>
 
   <!-- DISCOVER FEED -->
@@ -69,12 +77,22 @@
     </div>
   </div>
 
+  <!-- ACTIVITY CENTER -->
+  <div id="activityPage" class="hidden">
+    <div class="no-activity"><p>No activity yet</p></div>
+  </div>
+
+  <!-- CAMERA PAGE -->
+  <div id="cameraPage" class="hidden">
+    <div class="camera"><p>📷 Camera (feature coming soon!)</p></div>
+  </div>
+
   <!-- Bottom Navigation -->
   <div class="bottom-nav">
     <button class="nav-btn" id="homeBtn">🏠<br>Home</button>
     <button class="nav-btn" id="discoverBtn">🔍<br>Discover</button>
-    <button class="nav-btn create-btn">➕</button>
-    <button class="nav-btn">📩<br>Activity</button>
+    <button class="nav-btn create-btn" id="cameraBtn">➕</button>
+    <button class="nav-btn" id="activityBtn">📩<br>Activity</button>
     <button class="nav-btn" id="profileBtn">👤<br>Profile</button>
   </div>
 
@@ -85,21 +103,25 @@
     const homeFeed = document.getElementById("homeFeed");
     const discoverFeed = document.getElementById("discoverFeed");
     const profilePage = document.getElementById("profilePage");
+    const activityPage = document.getElementById("activityPage");
+    const cameraPage = document.getElementById("cameraPage");
 
     const homeBtn = document.getElementById("homeBtn");
     const discoverBtn = document.getElementById("discoverBtn");
     const profileBtn = document.getElementById("profileBtn");
+    const activityBtn = document.getElementById("activityBtn");
+    const cameraBtn = document.getElementById("cameraBtn");
 
     function showSection(section) {
-      homeFeed.classList.add("hidden");
-      discoverFeed.classList.add("hidden");
-      profilePage.classList.add("hidden");
+      [homeFeed, discoverFeed, profilePage, activityPage, cameraPage].forEach(s => s.classList.add("hidden"));
       section.classList.remove("hidden");
     }
 
     homeBtn.addEventListener("click", () => showSection(homeFeed));
     discoverBtn.addEventListener("click", () => showSection(discoverFeed));
     profileBtn.addEventListener("click", () => showSection(profilePage));
+    activityBtn.addEventListener("click", () => showSection(activityPage));
+    cameraBtn.addEventListener("click", () => showSection(cameraPage));
 
     // Follow button
     const followBtn = document.getElementById("followBtn");
