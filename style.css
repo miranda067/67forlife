@@ -5,11 +5,10 @@ body {
   background: linear-gradient(to bottom, #ffccdd, #fff4b3);
 }
 
-/* Profile */
+/* Profile Section */
 .profile-container {
   padding: 20px;
 }
-
 .profile-pic {
   width: 20%;
   max-width: 150px;
@@ -18,20 +17,22 @@ body {
   display: block;
   margin: 0 auto;
 }
-
-h1 { margin: 10px 0 5px; }
 .bio { margin-bottom: 15px; }
-.stats { display: flex; justify-content: center; gap: 50px; }
+.stats { display: flex; justify-content: center; gap: 40px; margin: 15px 0; }
 .stat-number { font-weight: bold; font-size: 1.2rem; }
 .follow-btn {
   background: #ff6699; color: white; border: none;
   padding: 8px 20px; border-radius: 20px; cursor: pointer;
   margin-bottom: 20px;
 }
+.tabs { display: flex; justify-content: center; border-bottom: 2px solid #ddd; }
+.tab { flex: 1; padding: 10px; cursor: pointer; font-weight: bold; color: #666; }
+.tab.active { color: #000; border-bottom: 3px solid #ff6699; }
+.no-posts { margin-top: 50px; color: #666; }
 
 /* Feeds */
 .feed {
-  height: 70vh;
+  height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
@@ -43,11 +44,7 @@ h1 { margin: 10px 0 5px; }
   height: 100vh;
   scroll-snap-align: start;
 }
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+video { width: 100%; height: 100%; object-fit: cover; }
 .like-btn {
   position: absolute;
   bottom: 80px;
@@ -60,13 +57,8 @@ video {
 .like-btn.liked { color: red; }
 
 /* Photos */
-.photo-card {
-  margin: 10px auto;
-}
-.photo-card img {
-  width: 80%;
-  border-radius: 10px;
-}
+.photo-card { margin: 15px auto; }
+.photo-card img { width: 80%; border-radius: 10px; }
 
 /* Bottom Nav */
 .bottom-nav {
