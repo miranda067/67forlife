@@ -3,31 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TikTok Style Profile</title>
+  <title>TikTok Style Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Profile Section (kept same as before) -->
-  <div class="profile-container">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-         alt="Ocean Profile Picture"
-         class="profile-pic">
-    <h1>@miranda</h1>
-    <p class="bio">
-      Hi, I’m Miranda 🌸 I love volleyball 🏐 and shopping 🛍️.<br>
-      I go to Dexter Southfield School 🎓
-    </p>
-
-    <div class="stats">
-      <div class="stat"><span class="stat-number">200</span><span class="stat-label">Following</span></div>
-      <div class="stat"><span class="stat-number">12.5K</span><span class="stat-label">Followers</span></div>
-      <div class="stat"><span class="stat-number">88.3K</span><span class="stat-label">Likes</span></div>
-    </div>
-
-    <button class="follow-btn" id="followBtn">Follow</button>
-  </div>
-
-  <!-- Home Feed (videos) -->
+  <!-- HOME FEED -->
   <div id="homeFeed" class="feed">
     <div class="video-card">
       <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted loop></video>
@@ -39,11 +19,54 @@
     </div>
   </div>
 
-  <!-- Discover Feed (photos) -->
+  <!-- DISCOVER FEED -->
   <div id="discoverFeed" class="feed hidden">
     <div class="photo-card"><img src="https://picsum.photos/300/400" alt="photo1"></div>
     <div class="photo-card"><img src="https://picsum.photos/301/400" alt="photo2"></div>
     <div class="photo-card"><img src="https://picsum.photos/302/400" alt="photo3"></div>
+  </div>
+
+  <!-- PROFILE PAGE -->
+  <div id="profilePage" class="hidden">
+    <div class="profile-container">
+      <!-- Profile Picture -->
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+           alt="Ocean Profile Picture"
+           class="profile-pic">
+
+      <!-- Username -->
+      <h1>@miranda</h1>
+
+      <!-- Bio -->
+      <p class="bio">
+        Hi, I’m Miranda 🌸 I love volleyball 🏐 and shopping 🛍️.<br>
+        I go to Dexter Southfield School 🎓
+      </p>
+
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat"><span class="stat-number">200</span><span class="stat-label">Following</span></div>
+        <div class="stat"><span class="stat-number">12.5K</span><span class="stat-label">Followers</span></div>
+        <div class="stat"><span class="stat-number">88.3K</span><span class="stat-label">Likes</span></div>
+      </div>
+
+      <!-- Follow Button -->
+      <button class="follow-btn" id="followBtn">Follow</button>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <div class="tab active" id="videosTab">Videos</div>
+        <div class="tab" id="likedTab">Liked</div>
+      </div>
+
+      <!-- Tab Content -->
+      <div id="videosSection" class="tab-content">
+        <div class="no-posts"><p>No posts yet</p></div>
+      </div>
+      <div id="likedSection" class="tab-content hidden">
+        <div class="no-posts"><p>No liked videos</p></div>
+      </div>
+    </div>
   </div>
 
   <!-- Bottom Navigation -->
@@ -52,37 +75,77 @@
     <button class="nav-btn" id="discoverBtn">🔍<br>Discover</button>
     <button class="nav-btn create-btn">➕</button>
     <button class="nav-btn">📩<br>Activity</button>
-    <button class="nav-btn">👤<br>Profile</button>
+    <button class="nav-btn" id="profileBtn">👤<br>Profile</button>
   </div>
 
+  <!-- Confetti -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <script>
-    // Switch between feeds
-    const homeBtn = document.getElementById("homeBtn");
-    const discoverBtn = document.getElementById("discoverBtn");
+    // Sections
     const homeFeed = document.getElementById("homeFeed");
     const discoverFeed = document.getElementById("discoverFeed");
+    const profilePage = document.getElementById("profilePage");
 
-    homeBtn.addEventListener("click", () => {
-      homeFeed.classList.remove("hidden");
-      discoverFeed.classList.add("hidden");
-    });
+    const homeBtn = document.getElementById("homeBtn");
+    const discoverBtn = document.getElementById("discoverBtn");
+    const profileBtn = document.getElementById("profileBtn");
 
-    discoverBtn.addEventListener("click", () => {
-      discoverFeed.classList.remove("hidden");
+    function showSection(section) {
       homeFeed.classList.add("hidden");
+      discoverFeed.classList.add("hidden");
+      profilePage.classList.add("hidden");
+      section.classList.remove("hidden");
+    }
+
+    homeBtn.addEventListener("click", () => showSection(homeFeed));
+    discoverBtn.addEventListener("click", () => showSection(discoverFeed));
+    profileBtn.addEventListener("click", () => showSection(profilePage));
+
+    // Follow button
+    const followBtn = document.getElementById("followBtn");
+    let isFollowing = false;
+    followBtn.addEventListener("click", () => {
+      if (!isFollowing) {
+        isFollowing = true;
+        followBtn.textContent = "Following";
+        followBtn.style.backgroundColor = "#ccc";
+        followBtn.style.color = "#333";
+        confetti({ particleCount: 120, spread: 90, origin: { y: 0.6 } });
+      } else {
+        isFollowing = false;
+        followBtn.textContent = "Follow";
+        followBtn.style.backgroundColor = "#ff6699";
+        followBtn.style.color = "white";
+      }
     });
 
-    // Like buttons
+    // Tabs
+    const videosTab = document.getElementById("videosTab");
+    const likedTab = document.getElementById("likedTab");
+    const videosSection = document.getElementById("videosSection");
+    const likedSection = document.getElementById("likedSection");
+
+    function activateTab(tab) {
+      if (tab === "videos") {
+        videosTab.classList.add("active");
+        likedTab.classList.remove("active");
+        videosSection.classList.remove("hidden");
+        likedSection.classList.add("hidden");
+      } else {
+        likedTab.classList.add("active");
+        videosTab.classList.remove("active");
+        likedSection.classList.remove("hidden");
+        videosSection.classList.add("hidden");
+      }
+    }
+    videosTab.addEventListener("click", () => activateTab("videos"));
+    likedTab.addEventListener("click", () => activateTab("liked"));
+
+    // Like buttons in video feed
     document.querySelectorAll(".like-btn").forEach(btn => {
       btn.addEventListener("click", () => {
-        if (btn.classList.contains("liked")) {
-          btn.classList.remove("liked");
-          btn.textContent = "❤️";
-        } else {
-          btn.classList.add("liked");
-          btn.textContent = "💖";
-        }
+        btn.classList.toggle("liked");
+        btn.textContent = btn.classList.contains("liked") ? "💖" : "❤️";
       });
     });
   </script>
