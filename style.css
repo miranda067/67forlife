@@ -1,150 +1,87 @@
-/* General Page */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   text-align: center;
-  background: linear-gradient(to bottom, #ffccdd, #fff4b3); /* baby pink → butter yellow */
-  color: #333;
+  background: linear-gradient(to bottom, #ffccdd, #fff4b3);
 }
 
-/* Profile container */
+/* Profile */
 .profile-container {
   padding: 20px;
-  margin-bottom: 80px; /* space above bottom nav */
 }
 
-/* Profile Picture */
 .profile-pic {
   width: 20%;
   max-width: 150px;
   border-radius: 50%;
-  border: 4px solid white;
+  border: 4px solid #ff6699;
   display: block;
   margin: 0 auto;
 }
 
-/* Username */
-h1 {
-  font-size: 1.4rem;
-  margin: 10px 0 5px;
-}
-
-/* Bio */
-.bio {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 20px;
-}
-
-/* Stats Row */
-.stats {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  margin: 15px 0 25px;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stat-number {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #000;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #444;
-}
-
-/* Follow Button */
+h1 { margin: 10px 0 5px; }
+.bio { margin-bottom: 15px; }
+.stats { display: flex; justify-content: center; gap: 50px; }
+.stat-number { font-weight: bold; font-size: 1.2rem; }
 .follow-btn {
-  background: #ff6699;
-  border: none;
-  padding: 10px 30px;
-  border-radius: 20px;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
+  background: #ff6699; color: white; border: none;
+  padding: 8px 20px; border-radius: 20px; cursor: pointer;
   margin-bottom: 20px;
 }
 
-/* Tabs */
-.tabs {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  border-bottom: 2px solid #ddd;
+/* Feeds */
+.feed {
+  height: 70vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
+.hidden { display: none; }
 
-.tab {
-  flex: 1;
-  padding: 10px;
+/* Video cards */
+.video-card {
+  position: relative;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.like-btn {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
   cursor: pointer;
-  font-weight: bold;
-  color: #666;
+}
+.like-btn.liked { color: red; }
+
+/* Photos */
+.photo-card {
+  margin: 10px auto;
+}
+.photo-card img {
+  width: 80%;
+  border-radius: 10px;
 }
 
-.tab.active {
-  color: #000;
-  border-bottom: 3px solid #ff6699;
-}
-
-/* Sections */
-.tab-content {
-  margin-top: 20px;
-}
-
-.hidden {
-  display: none;
-}
-
-.no-posts {
-  margin-top: 50px;
-  color: #666;
-  font-size: 1.1rem;
-}
-
-/* Popup message */
-.popup {
-  position: fixed;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 10px 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  font-weight: bold;
-  color: #333;
-  z-index: 1000;
-}
-.hidden {
-  display: none;
-}
-
-/* Bottom Navigation */
+/* Bottom Nav */
 .bottom-nav {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  border-top: 1px solid #ddd;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  bottom: 0; left: 0; width: 100%;
+  background: white; border-top: 1px solid #ccc;
+  display: flex; justify-content: space-around;
   padding: 8px 0;
-  z-index: 100;
 }
-
 .nav-btn {
-  background: n
+  background: none; border: none;
+  font-size: 1rem; cursor: pointer;
+}
+.create-btn {
+  background: #ff6699; color: white;
+  border-radius: 50%; padding: 10px 15px;
+  font-size: 1.5rem;
+}
